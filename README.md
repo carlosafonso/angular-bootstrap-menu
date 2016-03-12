@@ -25,6 +25,8 @@ Then use the Angular directive `ca-menu` wherever you wish:
 
 ```html
 <ca-menu header="Main menu"></ca-menu>
+
+<!-- skip the header attribute to hide the header -->
 ```
 
 Different menus can be defined using categories:
