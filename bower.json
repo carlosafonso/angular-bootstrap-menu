@@ -1,0 +1,31 @@
+{
+  "name": "ca-angular-bootstrap-menu",
+  "authors": [
+    "Carlos Afonso <carlos.afonso.perez@gmail.com>"
+  ],
+  "description": "A simple menu directive for AngularJS built with Bootstrap",
+  "main": [
+    "./dist/js/ca-angular-bootstrap-menu.min.js",
+    "./dist/css/ca-angular-bootstrap-menu.min.css"
+  ],
+  "moduleType": [
+    "package"
+  ],
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "menu"
+  ],
+  "license": "MIT",
+  "homepage": "www.carlosafon.so",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  }
+}

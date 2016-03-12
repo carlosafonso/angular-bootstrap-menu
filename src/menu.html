@@ -1,0 +1,12 @@
+<div class="list-group">
+	<div class="list-group">
+		<p class="list-group-item list-group-item-header"
+			ng-if="vm.header">{{ vm.header }}</p>
+		<a href="#" class="list-group-item"
+			ui-sref="{{ item.route }}"
+			ng-repeat="item in vm.menu">
+			<i ng-if="item.icon" class="fa fa-fw fa-{{ item.icon }}"></i>
+			<span>{{ item.text }}</span>
+		</a>
+	</div>
+</div>
