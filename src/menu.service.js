@@ -17,13 +17,19 @@
     };
 
     function add(item, category) {
-      if (! category) {
-        menu.default.push(item);
-      } else {
-        if (! menu.hasOwnProperty(category)) {
-          menu[category] = [];
+      if (item.constructor === Array) {
+        for (var i in item) {
+          add(item[i]);
         }
-        menu[category].push(item);
+      } else {
+        if (! category) {
+          menu.default.push(item);
+        } else {
+          if (! menu.hasOwnProperty(category)) {
+            menu[category] = [];
+          }
+          menu[category].push(item);
+        }
       }
     }
 
