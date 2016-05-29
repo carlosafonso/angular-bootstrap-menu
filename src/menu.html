@@ -3,9 +3,10 @@
 		<p class="list-group-item list-group-item-header"
 			ng-if="vm.header">{{ vm.header }}</p>
 		<a href="#" class="list-group-item"
+			ng-repeat="item in vm.menu"
 			ui-sref="{{ item.route }}"
 			ui-sref-active="active"
-			ng-repeat="item in vm.menu">
+			data-ui-sref-opts="{reload: true}">
 			<i ng-if="item.icon" class="fa fa-fw fa-{{ item.icon }}"></i>
 			<span>{{ item.text }}</span>
 		</a>
