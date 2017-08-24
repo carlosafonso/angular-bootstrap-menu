@@ -6,7 +6,7 @@
   .directive('caMenu', CaMenu);
 
   /** @ngInject */
-  function CaMenu() {
+  function CaMenu(caMenuService) {
     var directive = {
       restrict: 'E',
       templateUrl: 'ca-menu/menu.html',
@@ -14,17 +14,11 @@
         category: '@',
         header: '@'
       },
-      controller: CaMenuController,
-      controllerAs: 'vm',
-      bindToController: true
+      link: function(scope, element, attributes) {
+        scope.menu = caMenuService.getMenu(attributes.category);
+      }
     };
 
     return directive;
-
-    /** @ngInject */
-    function CaMenuController(caMenuService) {
-      var vm = this;
-      vm.menu = caMenuService.getMenu(vm.category);
-    }
   }
 })();
